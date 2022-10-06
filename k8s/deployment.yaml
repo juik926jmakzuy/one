@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ray
+  name: sun
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ray
+      app: sun
   template:
     metadata:
       labels:
-        app: ray
+        app: sun
     spec:
       containers:
-      - image: okteto.dev/ray:latest
-        name: ray
+      - image: okteto.dev/sun:latest
+        name: sun
         ports:
         - containerPort: 8080
         env:
